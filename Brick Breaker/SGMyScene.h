@@ -8,6 +8,9 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface SGMyScene : SKScene
+@interface SGMyScene : SKScene <SKPhysicsContactDelegate>
+
+@property (nonatomic) int lives;
+@property (nonatomic) int currentLevel;
 
 @end

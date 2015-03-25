@@ -17,8 +17,8 @@
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    //skView.showsFPS = YES;
+    //skView.showsNodeCount = YES;
     
     // Create and configure the scene.
     SKScene * scene = [SGMyScene sceneWithSize:skView.bounds.size];
@@ -26,6 +26,12 @@
     
     // Present the scene.
     [skView presentScene:scene];
+}
+
+// Must add this to get rid of the top display!
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (BOOL)shouldAutorotate
